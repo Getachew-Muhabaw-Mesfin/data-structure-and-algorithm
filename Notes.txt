@@ -1,0 +1,29 @@
+
+In JavaScript there are often situations where you want to return true or false depending on whether an element from a list of elements matches some condition.
+
+Consider a situation where we want to know if all numbers are less than 10:
+
+function lessThanTen(array) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] >= 10) {
+      return false;
+    }
+  }
+  return true;
+}
+
+The above code will work just fine! We are creating a boolean allLessThanTen that assumes true unless we find some element that is greater than or equal to 10 within our array.
+
+There may be a simpler way to do this though!
+
+
+function lessThanTen(array) {
+  let allLessThanTen = true;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] >= 10) {
+      allLessThanTen = false;
+      break;
+    }
+  }
+  return allLessThanTen;
+}

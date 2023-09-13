@@ -3,4 +3,5 @@ function eitherNotBoth(num) {
     return true;
   else return false;
 }
-eitherNotBoth(5);
+eitherNotBoth(5);// true
+eitherNotBoth(15) // false
